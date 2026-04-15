@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pasticceria Belvedere — Dal 1978</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <span>&#9742; 02 8765 4321</span>
+    <span class="sep">|</span>
+    <span>Via Roma 12, Milano</span>
+    <span class="sep">|</span>
+    <span>Lun&ndash;Dom &nbsp;7:00 &ndash; 20:00</span>
+  </div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-ornament">&#10022;</span>
+        <div class="logo-text">
+          <span class="logo-main">Pasticceria Belvedere</span>
+          <span class="logo-sub">Dal 1978</span>
+        </div>
+        <span class="logo-ornament">&#10022;</span>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Apri menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a class="nav-link" data-sezione="dolci" href="#menu">Dolci</a>
+        <a class="nav-link" data-sezione="bevande" href="#menu">Bevande</a>
+        <a class="nav-link" data-sezione="rosticceria" href="#menu">Rosticceria</a>
+        <a class="nav-link nav-cta" href="#contatti">Contattaci</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Artigianale &middot; Tradizionale &middot; Milanese</p>
+      <h1 class="hero-title">L&rsquo;arte della<br><em>pasticceria</em></h1>
+      <p class="hero-body">Ogni mattina il nostro laboratorio d&agrave; vita a dolci unici,<br class="br-desk"> realizzati con ingredienti selezionati e ricette di famiglia.</p>
+      <a href="#menu" class="hero-btn">Scopri il men&ugrave;</a>
+    </div>
+    <div class="hero-deco">
+      <div class="hero-circle c1"></div>
+      <div class="hero-circle c2"></div>
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <div class="strip">
+    <span>Pasticceria artigianale</span><span class="dot">&bull;</span>
+    <span>Gelateria</span><span class="dot">&bull;</span>
+    <span>Bar specialit&agrave;</span><span class="dot">&bull;</span>
+    <span>Rosticceria</span><span class="dot">&bull;</span>
+    <span>Catering</span><span class="dot">&bull;</span>
+    <span>Torte su ordinazione</span><span class="dot">&bull;</span>
+  </div>
+
+  <!-- MENU -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-label">Il nostro men&ugrave;</div>
+      <h2 class="section-title">Cosa ti offriamo</h2>
+
+      <div class="tab-nav">
+        <button class="tab-btn attivo" data-sezione="dolci">&#9679; Dolci</button>
+        <button class="tab-btn" data-sezione="bevande">&#9679; Bevande</button>
+        <button class="tab-btn" data-sezione="rosticceria">&#9679; Rosticceria</button>
+      </div>
+
+      <!-- SEZIONE DOLCI (sviluppatore 1) -->
+      <div id="dolci" class="sezione attiva">
+        <div class="sezione-intro">
+          <p>Sfornati ogni mattina dal nostro laboratorio artigianale</p>
+          <div class="filtri">
+            <button class="filtro-btn attivo" data-filtro="tutti">Tutti</button>
+            <button class="filtro-btn" data-filtro="classico">Classici</button>
+            <button class="filtro-btn" data-filtro="novita">Novit&agrave;</button>
+          </div>
+        </div>
+
+        <div class="categoria-label">Torte &amp; Pasticci</div>
+        <div class="prodotti-grid">
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#127874;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Torta della nonna</h3>
+            <p class="prodotto-desc">Pasta frolla con crema pasticcera e pinoli tostati, ricetta tradizionale toscana.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 3,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="novita">
+            <div class="card-top"><span class="card-icon">&#127856;</span><span class="badge badge-novita">Novit&agrave;</span></div>
+            <h3 class="prodotto-nome">Cheesecake frutti di bosco</h3>
+            <p class="prodotto-desc">Base di biscotto, crema di formaggio fresco e coulis di frutti di bosco.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 4,00</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card featured" data-tag="speciale">
+            <div class="card-top"><span class="card-icon">&#127851;</span><span class="badge badge-speciale">Chef&rsquo;s choice</span></div>
+            <h3 class="prodotto-nome">Tortino al cioccolato</h3>
+            <p class="prodotto-desc">Morbido all'esterno, cuore caldo al cioccolato 70%. Servito tiepido con gelato.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 4,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+        </div>
+
+        <div class="categoria-label">Pasticceria mignon</div>
+        <div class="prodotti-grid">
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#129360;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Cornetto alla crema</h3>
+            <p class="prodotto-desc">Sfoglia burrosa ripiena di crema pasticcera, glassato in superficie.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 1,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="novita">
+            <div class="card-top"><span class="card-icon">&#129364;</span><span class="badge badge-novita">Novit&agrave;</span></div>
+            <h3 class="prodotto-nome">Muffin ai mirtilli</h3>
+            <p class="prodotto-desc">Soffice impasto con mirtilli freschi e zucchero di canna in superficie.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 2,00</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#127854;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Cannolo siciliano</h3>
+            <p class="prodotto-desc">Cialda croccante con ricotta di pecora, gocce di cioccolato e canditi.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 2,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+        </div>
+
+        <div class="categoria-label">Gelati &amp; Semifreddi</div>
+        <div class="prodotti-grid">
+          <div class="prodotto-card" data-tag="stagionale">
+            <div class="card-top"><span class="card-icon">&#127848;</span><span class="badge badge-stagionale">Stagionale</span></div>
+            <h3 class="prodotto-nome">Coppa gelato artigianale</h3>
+            <p class="prodotto-desc">Due palline a scelta tra i gusti del giorno, panna montata e cialde.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 3,00</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="novita">
+            <div class="card-top"><span class="card-icon">&#127846;</span><span class="badge badge-novita">Novit&agrave;</span></div>
+            <h3 class="prodotto-nome">Semifreddo al torroncino</h3>
+            <p class="prodotto-desc">Crema semigelata con pezzi di torrone e salsa al caramello.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 3,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#129482;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Granita al limone</h3>
+            <p class="prodotto-desc">Granita siciliana con limoni di Sicilia, servita con brioche su richiesta.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 2,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+        </div>
+      </div>
+      <!-- FINE SEZIONE DOLCI -->
+
+      <!-- SEZIONE BEVANDE (sviluppatore 2) -->
+      <div id="bevande" class="sezione">
+        <div class="sezione-intro">
+          <p>Calde, fredde e analcoliche per ogni momento della giornata</p>
+        </div>
+
+        <div class="categoria-label">Bevande Calde</div>
+        <div class="prodotti-grid">
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#9749;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Espresso</h3>
+            <p class="prodotto-desc">Miscela artigianale di arabica e robusta, tostatura media. Cremoso e intenso.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 1,10</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#9749;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Cappuccino</h3>
+            <p class="prodotto-desc">Espresso con latte intero montato a vapore, morbida schiuma in superficie.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 1,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card featured" data-tag="speciale">
+            <div class="card-top"><span class="card-icon">&#9749;</span><span class="badge badge-speciale">Chef&rsquo;s choice</span></div>
+            <h3 class="prodotto-nome">Cioccolata calda densa</h3>
+            <p class="prodotto-desc">Cioccolato fondente 70% sciolto a bagnomaria, cremosa e avvolgente. Con panna su richiesta.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 2,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#127861;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">T&egrave; e tisane</h3>
+            <p class="prodotto-desc">Selezione di t&egrave; neri, verdi e tisane biologiche. Servito con miele e limone.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 1,80</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="novita">
+            <div class="card-top"><span class="card-icon">&#9749;</span><span class="badge badge-novita">Novit&agrave;</span></div>
+            <h3 class="prodotto-nome">Matcha latte</h3>
+            <p class="prodotto-desc">T&egrave; matcha giapponese in polvere con latte d&rsquo;avena caldo e sciroppo di agave.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 3,00</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#9749;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Latte macchiato</h3>
+            <p class="prodotto-desc">Latte intero caldo con un tocco di espresso. Delicato e vellutato.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 1,60</span><button class="card-btn">Ordina</button></div>
+          </div>
+        </div>
+
+        <div class="categoria-label">Bevande Fredde</div>
+        <div class="prodotti-grid">
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#127822;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Succhi di frutta</h3>
+            <p class="prodotto-desc">Pesca, albicocca, arancia rossa, ace. In bottiglia da 200 ml.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 2,00</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="novita">
+            <div class="card-top"><span class="card-icon">&#127821;</span><span class="badge badge-novita">Novit&agrave;</span></div>
+            <h3 class="prodotto-nome">Smoothie di stagione</h3>
+            <p class="prodotto-desc">Frullato fresco preparato al momento con frutta di stagione e yogurt greco.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 3,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#127967;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Acqua minerale</h3>
+            <p class="prodotto-desc">Naturale o frizzante. Bottiglia da 500 ml o 1 litro.</p>
+            <div class="prodotto-footer"><span class="prezzo">da &euro; 0,80</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="novita">
+            <div class="card-top"><span class="card-icon">&#9749;</span><span class="badge badge-novita">Novit&agrave;</span></div>
+            <h3 class="prodotto-nome">Cold brew al limone</h3>
+            <p class="prodotto-desc">Cold brew preparato in 12 ore con limone fresco e menta. Rinfrescante e leggero.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 3,00</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="stagionale">
+            <div class="card-top"><span class="card-icon">&#127819;</span><span class="badge badge-stagionale">Stagionale</span></div>
+            <h3 class="prodotto-nome">Limonata artigianale</h3>
+            <p class="prodotto-desc">Limoni di Amalfi, acqua frizzante e zucchero di canna. Preparata fresca ogni mattina.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 2,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#127870;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Bibite in lattina</h3>
+            <p class="prodotto-desc">Coca-Cola, Fanta, Sprite, San Pellegrino agrumi. Servite ghiacciate.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 2,00</span><button class="card-btn">Ordina</button></div>
+          </div>
+        </div>
+      </div>
+      <!-- FINE SEZIONE BEVANDE -->
+
+      <!-- SEZIONE ROSTICCERIA (sviluppatore 3) -->
+      <div id="rosticceria" class="sezione">
+        <div class="sezione-intro">
+          <p>Sfiziosit&agrave; salate preparate ogni giorno con ingredienti freschi</p>
+        </div>
+
+        <div class="categoria-label">Rustici &amp; Pizzette</div>
+        <div class="prodotti-grid">
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#127829;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Pizzetta rossa</h3>
+            <p class="prodotto-desc">Base di pasta lievitata con pomodoro San Marzano e origano. Croccante e fragrante.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 1,20</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#129363;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Calzone fritto</h3>
+            <p class="prodotto-desc">Pasta fritta ripiena di ricotta e salame napoletano. Caldo e filante.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 2,00</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card featured" data-tag="speciale">
+            <div class="card-top"><span class="card-icon">&#127829;</span><span class="badge badge-speciale">Chef&rsquo;s choice</span></div>
+            <h3 class="prodotto-nome">Rustico leccese</h3>
+            <p class="prodotto-desc">Pasta sfoglia burrosa con besciamella, pomodoro e mozzarella. Tiepido al punto giusto.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 2,20</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="novita">
+            <div class="card-top"><span class="card-icon">&#129363;</span><span class="badge badge-novita">Novit&agrave;</span></div>
+            <h3 class="prodotto-nome">Girella prosciutto e formaggio</h3>
+            <p class="prodotto-desc">Pasta brioche arrotolata con prosciutto cotto e filante provola affumicata.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 2,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#127829;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Focaccina farcita</h3>
+            <p class="prodotto-desc">Focaccia soffice con pomodorini, olive e rosmarino. Condita con olio EVO.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 1,80</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="novita">
+            <div class="card-top"><span class="card-icon">&#129363;</span><span class="badge badge-novita">Novit&agrave;</span></div>
+            <h3 class="prodotto-nome">Sfogliata spinaci e feta</h3>
+            <p class="prodotto-desc">Pasta sfoglia integrale con spinaci freschi saltati e feta greca sbriciolata.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 2,80</span><button class="card-btn">Ordina</button></div>
+          </div>
+        </div>
+
+        <div class="categoria-label">Tramezzini &amp; Panini</div>
+        <div class="prodotti-grid">
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#129365;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Tramezzino tonno e uovo</h3>
+            <p class="prodotto-desc">Pane morbido in cassetta con tonno all&rsquo;olio, uovo sodo e maionese.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 2,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#129365;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Tramezzino prosciutto e funghi</h3>
+            <p class="prodotto-desc">Prosciutto cotto di alta qualit&agrave;, funghi champignon trifolati e maionese.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 2,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="novita">
+            <div class="card-top"><span class="card-icon">&#127828;</span><span class="badge badge-novita">Novit&agrave;</span></div>
+            <h3 class="prodotto-nome">Panino vegetariano</h3>
+            <p class="prodotto-desc">Ciabatta croccante con hummus, avocado, pomodorini secchi e rucola fresca.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 3,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="stagionale">
+            <div class="card-top"><span class="card-icon">&#127828;</span><span class="badge badge-stagionale">Stagionale</span></div>
+            <h3 class="prodotto-nome">Panino porchetta e cicoria</h3>
+            <p class="prodotto-desc">Rosetta croccante con porchetta artigianale e cicoria ripassata in padella con aglio.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 3,80</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#127828;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Panino salame e provola</h3>
+            <p class="prodotto-desc">Pane tipo pugliese con salame Milano, provola affumicata e pomodoro fresco.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 3,20</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="novita">
+            <div class="card-top"><span class="card-icon">&#129365;</span><span class="badge badge-novita">Novit&agrave;</span></div>
+            <h3 class="prodotto-nome">Club sandwich pollo</h3>
+            <p class="prodotto-desc">Pane in cassetta tostato, petto di pollo grigliato, bacon, lattuga e salsa yogurt.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 4,00</span><button class="card-btn">Ordina</button></div>
+          </div>
+        </div>
+
+        <div class="categoria-label">Fritti &amp; Sfizi</div>
+        <div class="prodotti-grid">
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#127859;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Arancini di riso</h3>
+            <p class="prodotto-desc">Riso allo zafferano, rag&ugrave; di carne e piselli, panati e fritti al momento.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 2,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="classico">
+            <div class="card-top"><span class="card-icon">&#127859;</span><span class="badge badge-classico">Classico</span></div>
+            <h3 class="prodotto-nome">Crocch&egrave; di patate</h3>
+            <p class="prodotto-desc">Polpette di patate con provola, prezzemolo e pepe. Dorate e croccanti fuori.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 1,50</span><button class="card-btn">Ordina</button></div>
+          </div>
+          <div class="prodotto-card" data-tag="novita">
+            <div class="card-top"><span class="card-icon">&#127859;</span><span class="badge badge-novita">Novit&agrave;</span></div>
+            <h3 class="prodotto-nome">Frittatina di pasta</h3>
+            <p class="prodotto-desc">Pasta al rag&ugrave; con besciamella e piselli, fritta in pastella leggera. Specialit&agrave; napoletana.</p>
+            <div class="prodotto-footer"><span class="prezzo">&euro; 2,00</span><button class="card-btn">Ordina</button></div>
+          </div>
+        </div>
+      </div>
+      <!-- FINE SEZIONE ROSTICCERIA -->
+
+    </div>
+  </section>
+
+  <!-- NUMERI -->
+  <section class="about-strip">
+    <div class="container about-grid">
+      <div class="about-item"><div class="about-num">45+</div><div class="about-label">anni di tradizione</div></div>
+      <div class="about-divider"></div>
+      <div class="about-item"><div class="about-num">120+</div><div class="about-label">ricette originali</div></div>
+      <div class="about-divider"></div>
+      <div class="about-item"><div class="about-num">100%</div><div class="about-label">ingredienti freschi</div></div>
+      <div class="about-divider"></div>
+      <div class="about-item"><div class="about-num">&#9733;</div><div class="about-label">laboratorio artigianale</div></div>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section class="contatti-section" id="contatti">
+    <div class="container contatti-grid">
+      <div class="contatti-info">
+        <div class="section-label">Vieni a trovarci</div>
+        <h2 class="section-title">Dove siamo</h2>
+        <ul class="info-list">
+          <li><span class="info-icon">&#9873;</span><div><strong>Indirizzo</strong><br>Via Roma 12, 20121 Milano (MI)</div></li>
+          <li><span class="info-icon">&#9742;</span><div><strong>Telefono</strong><br>02 8765 4321</div></li>
+          <li><span class="info-icon">&#9993;</span><div><strong>Email</strong><br>info@pasticceriabelvedere.it</div></li>
+          <li><span class="info-icon">&#9202;</span><div><strong>Orari</strong><br>Luned&igrave; &ndash; Domenica: 7:00 &ndash; 20:00</div></li>
+        </ul>
+      </div>
+      <div class="contatti-form-wrap">
+        <h3 class="form-title">Scrivici un messaggio</h3>
+        <div class="form-group">
+          <label>Nome e cognome</label>
+          <input type="text" placeholder="Mario Rossi" />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="mario@email.it" />
+        </div>
+        <div class="form-group">
+          <label>Messaggio</label>
+          <textarea rows="4" placeholder="Scrivi qui la tua richiesta..."></textarea>
+        </div>
+        <button class="submit-btn" id="submitBtn">Invia messaggio</button>
+        <p class="form-feedback" id="formFeedback"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Pasticceria Belvedere</div>
+        <p>Dal 1978 portiamo sulle tue tavole<br>la tradizione dolciaria milanese.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Instagram">&#9825;</a>
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="TripAdvisor">&#9733;</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigazione</h4>
+        <ul>
+          <li><a href="#menu">Il men&ugrave;</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+          <li><a href="#">Torte su ordinazione</a></li>
+          <li><a href="#">Catering eventi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informazioni</h4>
+        <ul>
+          <li><a href="#">Chi siamo</a></li>
+          <li><a href="#">Allergeni</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Cookie policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Orari</h4>
+        <ul class="orari-list">
+          <li><span>Lun &ndash; Ven</span><span>7:00 &ndash; 20:00</span></li>
+          <li><span>Sabato</span><span>7:00 &ndash; 21:00</span></li>
+          <li><span>Domenica</span><span>8:00 &ndash; 19:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Pasticceria Belvedere S.r.l. &mdash; P.IVA 01234567890 &mdash; Via Roma 12, Milano</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
