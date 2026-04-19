@@ -1,19 +1,6 @@
-/* ================================================
-   script.js — Pasticceria Belvedere
-   ================================================
-   1. Header sticky con shadow on scroll
-   2. Hamburger menu mobile
-   3. Navigazione tab sezioni
-   4. Filtro prodotti (sezione Dolci)
-   5. Smooth scroll link navbar → sezione + apertura tab
-   6. Validazione e invio form contatti
-   ================================================ */
-
 document.addEventListener('DOMContentLoaded', function () {
 
-  /* ----------------------------------------------
-     1. HEADER — shadow on scroll
-     ---------------------------------------------- */
+  // HEADER
   var header = document.getElementById('header');
   window.addEventListener('scroll', function () {
     if (window.scrollY > 30) {
@@ -23,10 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-
-  /* ----------------------------------------------
-     2. HAMBURGER MENU MOBILE
-     ---------------------------------------------- */
   var hamburger = document.getElementById('hamburger');
   var nav       = document.getElementById('nav');
 
@@ -35,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     nav.classList.toggle('aperto');
   });
 
-  // Chiude il menu se si clicca fuori
+  //Chiude il menu se si clicca fuori
   document.addEventListener('click', function (e) {
     if (!header.contains(e.target)) {
       hamburger.classList.remove('aperto');
@@ -44,9 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-  /* ----------------------------------------------
-     3. NAVIGAZIONE TAB SEZIONI
-     ---------------------------------------------- */
+  //Navigazione
   var tabButtons = document.querySelectorAll('.tab-btn');
   var sezioni    = document.querySelectorAll('.sezione');
 
@@ -64,31 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
       apriSezione(btn.getAttribute('data-sezione'));
     });
   });
-
-
-  /* ----------------------------------------------
-     4. FILTRO PRODOTTI (Dolci)
-     ---------------------------------------------- */
-  var filtroBtns    = document.querySelectorAll('.filtro-btn');
-  var prodottiDolci = document.querySelectorAll('#dolci .prodotto-card');
-
-  filtroBtns.forEach(function (filtroBtn) {
-    filtroBtn.addEventListener('click', function () {
-      var filtro = filtroBtn.getAttribute('data-filtro');
-
-      filtroBtns.forEach(function (b) { b.classList.remove('attivo'); });
-      filtroBtn.classList.add('attivo');
-
-      prodottiDolci.forEach(function (card) {
-        var tag = card.getAttribute('data-tag');
-        var mostra = filtro === 'tutti' ||
-                     (filtro === 'classico' && tag === 'classico') ||
-                     (filtro === 'novita'   && tag === 'novita');
-        card.classList.toggle('nascosta', !mostra);
-      });
-    });
-  });
-
 
   /* ----------------------------------------------
      5. LINK NAVBAR → apre tab corretto + scroll
