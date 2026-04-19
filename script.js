@@ -46,9 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /* ----------------------------------------------
-     5. LINK NAVBAR → apre tab corretto + scroll
-     ---------------------------------------------- */
   var navLinks = document.querySelectorAll('.nav-link[data-sezione]');
 
   navLinks.forEach(function (link) {
@@ -73,9 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-  /* ----------------------------------------------
-     6. BOTTONE "ORDINA" — feedback toast
-     ---------------------------------------------- */
+  //BOTTONE ORDINA
   document.querySelectorAll('.card-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var nome = btn.closest('.prodotto-card').querySelector('.prodotto-nome').textContent;
@@ -105,9 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
-  /* ----------------------------------------------
-     7. FORM CONTATTI — validazione + feedback
-     ---------------------------------------------- */
+  //CONTATTI
   var submitBtn    = document.getElementById('submitBtn');
   var formFeedback = document.getElementById('formFeedback');
 
@@ -116,11 +109,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var email   = document.querySelector('.contatti-form-wrap input[type="email"]');
     var msg     = document.querySelector('.contatti-form-wrap textarea');
 
-    // Reset
     formFeedback.textContent = '';
     formFeedback.style.color = '';
 
-    // Validazione base
     if (!nome.value.trim() || !email.value.trim() || !msg.value.trim()) {
       formFeedback.textContent = 'Per favore compila tutti i campi.';
       formFeedback.style.color = '#A32D2D';
@@ -132,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    // Simula invio
+    //INVIO SIMULAZIONE
     submitBtn.textContent = 'Invio in corso...';
     submitBtn.disabled = true;
 
